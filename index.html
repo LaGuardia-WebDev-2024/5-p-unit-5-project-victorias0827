@@ -1,13 +1,13 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] height: and width:
-[  ] margin: and padding: 
-[  ] Three Images
+[ yes ] <div> and <span>
+[ yes ] height: and width:
+[ 2] margin: and padding: 
+[ yes ] Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
+[ yes ] Feature 2 - Flip Card
 [ no ] Feature 3 - Navbar
 [ no ] Feature 4 - Shaking Animation
 [ no ] Feature 5 - Gradient Background
@@ -16,17 +16,169 @@ Select ONE Additional Feature to Add
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Unit 5 Project</title>
+    <meta charset="utf-8" />
+    <style>
+      div {
+        width: 300px;
+        margin: auto;
+        border: 1px solid rgb(199, 158, 230);
+        padding: 2px;
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+      body {
+        background-image: url("https://cdn.glitch.global/99c39a92-023d-45ab-88b1-85bf224346ec/flower.jpg?v=1732115363617");
+      }
 
-  </style>
-</head>
-<body>
+      h1 {
+        color: violet;
+      }
 
- 
+      h2 {
+        color: black;
+        font-family: helvetica;
+        font-size: 20px;
+      }
 
-</body>
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-image: url("https://cdn.glitch.global/99c39a92-023d-45ab-88b1-85bf224346ec/blue.webp?v=1732547297801");
+        color: white;
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front {
+        background-image: url("https://cdn.glitch.global/99c39a92-023d-45ab-88b1-85bf224346ec/pink.png?v=1732546844517");
+      }
+
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 200px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+      }
+      .likes {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h1>All About Me!</h1>
+          <p>Victoria Shvager</p>
+          <p>Laguardia High School</p>
+        </div>
+        <div class="flip-card-back">
+          <h2>
+            <span class="likes">I like to...</span>
+            <ol>
+              <li>Play volleyball</li>
+
+              <li>Bake/cook</li>
+
+              <li>Act (I'm a drama major)</li>
+              <li>Hang out with my friends</li>
+            </ol>
+          </h2>
+          <img
+            src="https://cdn.glitch.global/99c39a92-023d-45ab-88b1-85bf224346ec/cat.gif?v=1732719340488"
+            width="100"
+          />
+          <img
+            src="https://cdn.glitch.global/99c39a92-023d-45ab-88b1-85bf224346ec/pigs.gif?v=1732719682294"
+            width="120"
+          />
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h1>All About You!</h1>
+          <p>xxxxx</p>
+          <p>xxxxx</p>
+        </div>
+        <div class="flip-card-back">
+          <h2>
+            <span class="likes">I like to...</span>
+            <ol>
+              <li>xxxx</li>
+              <li>xxxx</li>
+              <li>xxxx</li>
+              <li>xxxx</li>
+            </ol>
+          </h2>
+        </div>
+        <img src="xxx" />
+        <img src="xxx" />
+        <img src="xxx" />
+      </div>
+    </div>
+  </body>
 </html>
